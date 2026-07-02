@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Basketball Shooter – Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family:'Outfit',sans-serif; background:#0b0d14; color:#e4e6f0; display:flex; align-items:center; justify-content:center; min-height:100vh; margin:0; }
+    .box { text-align:center; max-width:480px; padding:40px 32px; background:#12151f; border:1px solid rgba(255,255,255,0.07); border-radius:18px; }
+    .icon { font-size:72px; margin-bottom:20px; }
+    h1 { font-size:1.8rem; margin-bottom:12px; }
+    p { color:#64687a; line-height:1.7; margin-bottom:24px; }
+    code { background:rgba(255,255,255,0.06); padding:2px 8px; border-radius:6px; font-size:0.85em; color:#a78bfa; }
+    .steps { text-align:left; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:16px 20px; font-size:0.9rem; color:#64687a; line-height:1.9; }
+    .steps strong { color:#e4e6f0; display:block; margin-bottom:6px; }
+    .steps ol { padding-left:18px; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="icon">🏀</div>
+    <h1>Basketball Shooter</h1>
+    <p>This game is not yet built. Build it in Unity and replace this <code>src/</code> folder with the WebGL output.</p>
+    <div class="steps">
+      <strong>How to deploy:</strong>
+      <ol>
+        <li>Install Unity Hub + Unity <strong>6000.0.x</strong></li>
+        <li>Open <code>BasketBall_Project.zip</code> in Unity</li>
+        <li>File → Build Settings → WebGL → Build</li>
+        <li>Delete this <code>src/</code> folder</li>
+        <li>Copy the Unity Build output here as <code>src/</code></li>
+        <li>Commit &amp; push → Render redeploys automatically</li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>

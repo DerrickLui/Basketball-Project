@@ -4,6 +4,7 @@ const path    = require('path');
 const app  = express();
 const PORT = process.env.PORT || 8080;
 
+// Unity WebGL .gz files need Content-Encoding: gzip + correct Content-Type
 app.use(express.static(path.join(__dirname, 'src'), {
   setHeaders: (res, filePath) => {
     const ext = path.extname(filePath).toLowerCase();
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'src'), {
   }
 }));
 
+// Fallback → index.html
 app.use((req, res, next) => {
   if (req.method === 'GET' && req.accepts('html')) {
     res.sendFile(path.join(__dirname, 'src', 'index.html'));
@@ -34,5 +36,5 @@ app.use((req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Basketball Project running at http://localhost:${PORT}`);
+  console.log(`ShopNPlay Basketball Game running at http://localhost:${PORT}`);
 });
